@@ -10,22 +10,25 @@ tags: 读书笔记 数据挖掘
 
 ## Chapter 2: Get Started with Recommendation Systems
 ### 曼哈顿距离 Manhattan Distance
+
 ```mathjax
 Manhattan(x,y)=\sum_{i=1}^n|x_i-y_i|
 ```
+
 ### 欧几里得距离 Euclidean Distance
+
 ```mathjax
 Euclidean(x,y)=(\sum_{i=1}^n{|x_i-y_i|}^2)^{1\over2}
 ```
 
 ### 泛化 A generalization
+
 ```mathjax
 d(x,y)=(\sum_{i=1}^n{|x_i-y_i|}^r)^{1\over r}
 ```
+
 如果数据结构是高密度类型（数据整齐，很少缺失或0值），且数值本身的意义重大，那么则使用曼哈顿或欧几里德距离。
-If your data is dense
-(almost all attributes have non- zero values) and the magnitude of the attribute values is important, use distance measures such as Euclidean or
-Manhattan.
+If your data is dense (almost all attributes have non- zero values) and the magnitude of the attribute values is important, use distance measures such as Euclidean or Manhattan.
 
 **r值越大，灵敏度越高：任何一个维度的差异对整体结果的影响随着r的增加而增加。**
 **The greater the r, the more a large difference in one dimension will influence the total difference.**
@@ -34,6 +37,7 @@ Manhattan.
 
 ### 基于用户的相关性分析: 皮尔松相关系数 Pearson Correlation Coefficient
 皮尔松相关系数 Pearson Correlation Coefficient，系数的值在0~1之间，0表示不相关，1表示行为完全一致。
+
 ```mathjax
 r={ { {\sum_{i=1}^nx_iy_i} - {{ {\sum_{i=1}^nx_i}{\sum_{i=1}^ny_i}} \over {n} } } \over { \sqrt{ {\sum_{i=1}^n{x_i}^2} - {(\sum_{i=1}^n{x_i})^2 \over n} }  \sqrt{ {\sum_{i=1}^n{y_i}^2} - {(\sum_{i=1}^n{y_i})^2 \over n} }  }  }
 ```
