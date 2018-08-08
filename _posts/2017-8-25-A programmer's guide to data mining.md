@@ -38,9 +38,10 @@ If your data is dense (almost all attributes have non- zero values) and the magn
 ### 基于用户的相关性分析: 皮尔松相关系数 Pearson Correlation Coefficient
 皮尔松相关系数 Pearson Correlation Coefficient，系数的值在0~1之间，0表示不相关，1表示行为完全一致。
 
-```mathjax
+```
 r={ { {\sum_{i=1}^nx_iy_i} - {{ {\sum_{i=1}^nx_i}{\sum_{i=1}^ny_i}} \over {n} } } \over { \sqrt{ {\sum_{i=1}^n{x_i}^2} - {(\sum_{i=1}^n{x_i})^2 \over n} }  \sqrt{ {\sum_{i=1}^n{y_i}^2} - {(\sum_{i=1}^n{y_i})^2 \over n} }  }  }
 ```
+
 如果数据结构等级膨胀类型，则使用皮尔松系数计算相关性。
 If the data is subject to grade-inflation (different users may be using different scales) use Pearson.
 ```不同的人评价或打分的基数不一样，使用皮尔松系数可以去除基数差别带来的影响。```
